@@ -1,0 +1,78 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_configs",
+  "info": {
+    "singularName": "app-config",
+    "pluralName": "app-configs",
+    "displayName": "ตั้งค่าสำหรับ เว็บ/แอป",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vat": {
+      "type": "integer",
+      "default": 7,
+      "required": true
+    },
+    "bankAccounts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "bank-account.bank-account"
+    },
+    "facebookChatEnable": {
+      "type": "boolean",
+      "default": false
+    },
+    "facebookChatPageId": {
+      "type": "string"
+    },
+    "facebookChatUrl": {
+      "type": "string"
+    },
+    "footerText": {
+      "type": "text"
+    },
+    "popupPromotions": {
+      "displayName": "Popup Promotion",
+      "type": "component",
+      "repeatable": true,
+      "component": "popup-promotion.popup-promotion"
+    },
+    "popupTutorials": {
+      "displayName": "Popup Tutorial",
+      "type": "component",
+      "repeatable": true,
+      "component": "popup-tutorial.popup-tutorial"
+    },
+    "popupPromotionEnable": {
+      "type": "boolean",
+      "default": true
+    },
+    "popupTutorialEnable": {
+      "type": "boolean",
+      "default": true
+    },
+    "popupHoroscopeEnable": {
+      "type": "boolean",
+      "default": true
+    },
+    "popupHoroscopeBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "popupPromotionBackground": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

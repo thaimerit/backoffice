@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_order_order_items",
+  "info": {
+    "displayName": "Order Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "promotionPrice": {
+      "type": "decimal"
+    },
+    "prayword": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "period": {
+      "type": "enumeration",
+      "enum": [
+        "morning",
+        "evening"
+      ]
+    },
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "donationReasons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::donation-reason.donation-reason"
+    },
+    "point": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chinese_zodiacs",
+  "info": {
+    "singularName": "chinese-zodiac",
+    "pluralName": "chinese-zodiacs",
+    "displayName": "ปีนักษัตรจีน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "places": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place",
+      "inversedBy": "godOfYear"
+    }
+  }
+}

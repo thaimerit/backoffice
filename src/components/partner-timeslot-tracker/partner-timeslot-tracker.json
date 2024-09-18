@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_partner_timeslot_tracker_partner_timeslot_trackers",
+  "info": {
+    "displayName": "PartnerTimeslotTracker",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true,
+      "unique": false
+    },
+    "morningQuotaUsed": {
+      "type": "integer",
+      "default": 0,
+      "required": false
+    },
+    "eveningQuotaUsed": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_popup_tutorial_popup_tutorials",
+  "info": {
+    "displayName": "Popup Tutorial",
+    "icon": "headphones",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

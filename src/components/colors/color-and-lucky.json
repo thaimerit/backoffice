@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_colors_color_and_luckies",
+  "info": {
+    "displayName": "Color And Lucky",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sacred-type.sacred-type"
+    }
+  }
+}

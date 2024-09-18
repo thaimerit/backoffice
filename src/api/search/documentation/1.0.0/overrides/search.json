@@ -1,0 +1,58 @@
+{
+  "/search": {
+    "get": {
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      },
+      "tags": [
+        "Search"
+      ],
+      "parameters": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "operationId": "get/search"
+    }
+  },
+  "/search/{sectionSlug}": {
+    "get": {
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      },
+      "tags": [
+        "Search"
+      ],
+      "parameters": [
+        {
+          "name": "sectionSlug",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "keyword",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "operationId": "get/search/{sectionSlug}"
+    }
+  }
+}

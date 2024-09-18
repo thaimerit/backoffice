@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "สินค้า",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[ก-๙A-Za-z0-9-_.~]*$"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "promotionPrice": {
+      "type": "decimal"
+    },
+    "galleries": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "service": {
+      "type": "richtext"
+    },
+    "condition": {
+      "type": "richtext"
+    },
+    "place": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::place.place",
+      "inversedBy": "products"
+    },
+    "coverImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-cover.image-cover"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "package",
+        "product"
+      ],
+      "required": true,
+      "default": "package"
+    },
+    "dayOfWeeks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::day-of-week.day-of-week"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "products"
+    },
+    "sacredTypes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sacred-type.sacred-type",
+      "mappedBy": "products"
+    },
+    "modelName": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "string"
+    },
+    "point": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

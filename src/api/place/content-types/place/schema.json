@@ -1,0 +1,151 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "สถานที่",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "templeName": {
+      "type": "string",
+      "required": true
+    },
+    "sacredTypes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sacred-type.sacred-type",
+      "inversedBy": "places"
+    },
+    "howtoPray": {
+      "type": "richtext"
+    },
+    "masterReview": {
+      "type": "richtext"
+    },
+    "galleries": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bankAccounts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "bank-account.bank-account"
+    },
+    "placeType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place-type.place-type"
+    },
+    "highlightName": {
+      "type": "string"
+    },
+    "history": {
+      "type": "richtext"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "holythings": {
+      "type": "richtext"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "places"
+    },
+    "godOfYear": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::chinese-zodiac.chinese-zodiac",
+      "mappedBy": "places"
+    },
+    "prayWord": {
+      "type": "richtext"
+    },
+    "moreInfo": {
+      "type": "richtext"
+    },
+    "coverImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-cover.image-cover"
+    },
+    "clips": {
+      "type": "component",
+      "repeatable": true,
+      "component": "clip.clip"
+    },
+    "hasDonation": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "geolocation": {
+      "type": "json"
+    },
+    "province": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::province.province",
+      "inversedBy": "places"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[ก-๙A-Za-z0-9-_.~]*$"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "lives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::live.live",
+      "mappedBy": "place"
+    },
+    "zodiacs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zodiac.zodiac",
+      "inversedBy": "places"
+    },
+    "coverTitle": {
+      "type": "text"
+    },
+    "dayOfWeeks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::day-of-week.day-of-week"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "place"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package",
+      "mappedBy": "place"
+    }
+  }
+}

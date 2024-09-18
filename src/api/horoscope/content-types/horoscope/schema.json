@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horoscopes",
+  "info": {
+    "singularName": "horoscope",
+    "pluralName": "horoscopes",
+    "displayName": "คำทำนายดวงประจำวัน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dayOfWeek": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::day-of-week.day-of-week"
+    },
+    "horoscopes": {
+      "displayName": "Horoscopes",
+      "type": "component",
+      "repeatable": true,
+      "component": "horoscopes.horoscopes"
+    },
+    "zodiac": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::zodiac.zodiac"
+    }
+  }
+}

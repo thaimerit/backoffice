@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "ประวัติการชำระเงิน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order",
+      "mappedBy": "payment"
+    },
+    "requestBody": {
+      "type": "json"
+    },
+    "responseBody": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "success",
+        "fail",
+        "void"
+      ]
+    },
+    "omiseChargeId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "transferSlip": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "bank",
+        "omise"
+      ],
+      "required": true
+    },
+    "productOrder": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-order.product-order",
+      "inversedBy": "payment"
+    }
+  }
+}

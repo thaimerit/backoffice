@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "message_templates",
+  "info": {
+    "singularName": "message-template",
+    "pluralName": "message-templates",
+    "displayName": "ตั้งค่าข้อความ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

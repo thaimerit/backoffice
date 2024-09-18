@@ -1,0 +1,17 @@
+node_modules
+dist
+build
+.env
+backup
+public/uploads
+.git
+.cache
+.env.example
+.env.uat
+.env.dev
+tool
+docker-compose.strapi.yml
+docker-compose.yml
+pkey_test_5saigxwf3ogeo670m0g
+push-prod.sh
+package-lock.json

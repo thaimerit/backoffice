@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "configs",
+  "info": {
+    "singularName": "config",
+    "pluralName": "configs",
+    "displayName": "ตั้งค่าระบบ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LINE_LIFF_CHANNEL_ID": {
+      "type": "string"
+    },
+    "LINE_LIFF_CHANNEL_SECRET": {
+      "type": "string",
+      "private": true
+    },
+    "LINE_LIFF_FRONT_END_URL": {
+      "type": "string"
+    },
+    "OMISE_PUBLIC_KEY": {
+      "type": "string"
+    },
+    "OMISE_SECRET_KEY": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_clip_clips",
+  "info": {
+    "displayName": "Clip",
+    "icon": "video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "youtube",
+        "facebook"
+      ],
+      "required": true
+    },
+    "url": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

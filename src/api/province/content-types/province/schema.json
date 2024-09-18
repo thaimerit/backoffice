@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provinces",
+  "info": {
+    "singularName": "province",
+    "pluralName": "provinces",
+    "displayName": "จังหวัด",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "integer",
+      "required": true
+    },
+    "places": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::place.place",
+      "mappedBy": "province"
+    }
+  }
+}

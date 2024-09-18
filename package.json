@@ -1,0 +1,67 @@
+{
+  "name": "thaimerit-cms",
+  "private": true,
+  "version": "1.7.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "node patch-module.js && strapi develop",
+    "start": "strapi start",
+    "build": "node patch-module.js && strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@line/bot-sdk": "^7.5.0",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.6",
+    "@mui/utils": "^5.11.2",
+    "@strapi/plugin-documentation": "^4.3.6",
+    "@strapi/plugin-i18n": "4.3.6",
+    "@strapi/plugin-users-permissions": "4.3.6",
+    "@strapi/provider-email-mailgun": "^4.3.6",
+    "@strapi/provider-email-nodemailer": "^4.3.6",
+    "@strapi/strapi": "4.3.6",
+    "apple-signin-auth": "^1.7.4",
+    "axios": "^0.27.2",
+    "chart.js": "^4.1.2",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "csvtojson": "^2.0.10",
+    "date-fns": "^2.29.3",
+    "dayjs": "^1.11.7",
+    "firebase-admin": "^11.0.1",
+    "form-data": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "highcharts": "^10.3.2",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.2",
+    "omise": "^0.8.5",
+    "papaparse": "^5.3.2",
+    "pg": "8.6.0",
+    "prop-types": "^15.8.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-google-charts": "^4.0.0",
+    "react-json-to-csv": "^1.2.0",
+    "slugify": "^1.6.5",
+    "strapi-plugin-menus": "^1.0.2",
+    "strapi-plugin-rest-cache": "^4.2.4",
+    "strapi-provider-rest-cache-memory": "^4.2.4"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "7ed18059-f812-42b7-bd19-7d08799f841a"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

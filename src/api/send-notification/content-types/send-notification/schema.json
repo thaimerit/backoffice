@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "send_notifications",
+  "info": {
+    "singularName": "send-notification",
+    "pluralName": "send-notifications",
+    "displayName": "ส่งการแจ้งเตือนข่าวสาร",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "sendNotification"
+    },
+    "galleries": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "scheduleDate": {
+      "type": "datetime"
+    },
+    "scheduleRepeat": {
+      "type": "enumeration",
+      "enum": [
+        "ONETIME",
+        "EVERY_DAY",
+        "EVERY_WEEK",
+        "EVERY_MONTH"
+      ],
+      "default": "ONETIME"
+    },
+    "sentDate": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE"
+      ],
+      "default": "ACTIVE",
+      "required": true
+    },
+    "scheduleSendingDate": {
+      "type": "datetime"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}

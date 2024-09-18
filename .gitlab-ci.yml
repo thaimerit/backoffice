@@ -1,0 +1,21 @@
+stages:
+  - build_image
+  - push_image
+
+variables:
+  IMAGE_TAG: $CI_DOCKER_REGISTRY/thai-merit/thaimerit-cms:$CI_COMMIT_REF_NAME
+
+build_image:
+  stage: build_image
+  script:
+    - docker build -t $IMAGE_TAG .
+  only:
+    - production # Trigger this job only on the master branch or any other branch you prefer
+
+push_image:
+  stage: push_image
+  script:
+    - echo "$CI_DOCKER_REGISTRY_PASSWORD" | docker login --username "$CI_DOCKER_REGISTRY_USER" --password-stdin $CI_DOCKER_REGISTRY
+    - docker push $IMAGE_TAG
+  only:
+    - production # Trigger this job only on the master branch or any other branch you prefer

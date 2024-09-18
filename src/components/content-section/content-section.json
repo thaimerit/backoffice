@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_content_section_content_sections",
+  "info": {
+    "displayName": "Content Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "contentType": {
+      "type": "enumeration",
+      "enum": [
+        "places",
+        "products",
+        "packages",
+        "holysticks"
+      ]
+    },
+    "limit": {
+      "type": "integer",
+      "default": 10
+    },
+    "params": {
+      "type": "json"
+    },
+    "totalLink": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "sacreds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sacred-type.sacred-type"
+    }
+  }
+}

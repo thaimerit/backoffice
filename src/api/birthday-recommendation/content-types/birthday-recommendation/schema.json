@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "birthday_recommendations",
+  "info": {
+    "singularName": "birthday-recommendation",
+    "pluralName": "birthday-recommendations",
+    "displayName": "เสริมบุญเฉพาะคุณ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "zodiac": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::zodiac.zodiac"
+    },
+    "dayOfWeek": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::day-of-week.day-of-week"
+    },
+    "recommendations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "horoscopes.horoscopes"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donation_reasons",
+  "info": {
+    "singularName": "donation-reason",
+    "pluralName": "donation-reasons",
+    "displayName": "จุดประสงค์การบริจาค"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

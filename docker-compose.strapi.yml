@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+    strapi:
+        image: registry.ktlabs.io/thai-merit/thaimerit-cms:0.3.0
+        restart: unless-stopped
+        container_name: strapi
+        ports:
+            - "1337:1337"

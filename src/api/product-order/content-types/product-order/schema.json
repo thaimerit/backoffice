@@ -1,0 +1,142 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_orders",
+  "info": {
+    "singularName": "product-order",
+    "pluralName": "product-orders",
+    "displayName": "คำสั่งซื้อสินค้ามงคล",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "populateCreatorFields": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderItems": {
+      "displayName": "Order Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "order.order-item"
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "waiting-for-payment",
+        "purchase",
+        "cancel"
+      ],
+      "default": "pending"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "pending",
+        "approve",
+        "cancel",
+        "complete"
+      ],
+      "default": "draft"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "vat": {
+      "type": "decimal"
+    },
+    "sum": {
+      "type": "decimal"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "package",
+        "product",
+        "donation"
+      ]
+    },
+    "customer_firstname": {
+      "type": "string"
+    },
+    "customer_lastname": {
+      "type": "string"
+    },
+    "customer_taxno": {
+      "type": "string"
+    },
+    "packagePlace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "packagePeriod": {
+      "type": "enumeration",
+      "enum": [
+        "morning",
+        "evening"
+      ]
+    },
+    "packageDate": {
+      "type": "date"
+    },
+    "evidenceOfActions": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "partnerUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "shippingAddress": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.address"
+    },
+    "point": {
+      "type": "decimal"
+    },
+    "complete": {
+      "type": "boolean",
+      "default": false
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "partnerAcceptStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "payment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment.payment",
+      "inversedBy": "productOrder"
+    },
+    "updatedUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "updatedUserAt": {
+      "type": "datetime"
+    }
+  }
+}

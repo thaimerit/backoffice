@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_image_cover_image_covers",
+  "info": {
+    "displayName": "Image Cover"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "pc",
+        "mobile"
+      ],
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

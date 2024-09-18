@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_timeslots",
+  "info": {
+    "singularName": "partner-timeslot",
+    "pluralName": "partner-timeslots",
+    "displayName": "Partner Timeslot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "partnerTimeslots"
+    },
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "morningQuota": {
+      "type": "integer",
+      "default": 100,
+      "required": true
+    },
+    "eveningQuota": {
+      "type": "integer",
+      "default": 100,
+      "required": true
+    },
+    "partnerTimeslotTrackers": {
+      "displayName": "PartnerTimeslotTracker",
+      "type": "component",
+      "repeatable": true,
+      "component": "partner-timeslot-tracker.partner-timeslot-tracker"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sacred_types",
+  "info": {
+    "singularName": "sacred-type",
+    "pluralName": "sacred-types",
+    "displayName": "ประเภทสิ่งศักดิ์สิทธิ์",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "places": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place",
+      "mappedBy": "sacredTypes"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "sacredTypes"
+    }
+  }
+}

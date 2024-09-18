@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shelf_places_shelf_places",
+  "info": {
+    "displayName": "Shelf Places"
+  },
+  "options": {},
+  "attributes": {
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    }
+  }
+}

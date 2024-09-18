@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "holysticks",
+  "info": {
+    "singularName": "holystick",
+    "pluralName": "holysticks",
+    "displayName": "เซียมซีออนไลน์",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[ก-๙A-Za-z0-9-_.~]*$"
+    },
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "predictions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prediction.prediction"
+    },
+    "coverImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image-cover.image-cover"
+    }
+  }
+}

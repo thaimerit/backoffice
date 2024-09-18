@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "shopping-cart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "village": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "alley": {
+      "type": "string"
+    },
+    "provinceId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::province.province"
+    },
+    "district": {
+      "type": "string"
+    },
+    "subDistrict": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    }
+  }
+}

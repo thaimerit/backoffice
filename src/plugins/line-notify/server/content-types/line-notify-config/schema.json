@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "line_notify_configs",
+  "info": {
+    "singularName": "line-notify-config",
+    "pluralName": "line-notify-configs",
+    "displayName": "Line Notify Config"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {
+    "LINE_CHANNEL_ID": {
+      "type": "text"
+    },
+    "LINE_CHANNEL_ACCESS_TOKEN": {
+      "type": "text"
+    },
+    "LINE_CHANNEL_SECRET": {
+      "type": "text"
+    }
+  }
+}

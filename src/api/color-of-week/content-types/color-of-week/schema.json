@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "color-of-weeks",
+  "info": {
+    "singularName": "color-of-week",
+    "pluralName": "color-of-weeks",
+    "displayName": "สีประจำวัน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[ก-๙A-Za-z0-9-_.~]*$"
+    },
+    "by": {
+      "type": "string"
+    },
+    "colors": {
+      "displayName": "Colors",
+      "type": "component",
+      "repeatable": true,
+      "component": "colors.colors"
+    }
+  }
+}

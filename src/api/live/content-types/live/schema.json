@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lives",
+  "info": {
+    "singularName": "live",
+    "pluralName": "lives",
+    "displayName": "ไหว้พระออนไลน์",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "startDateTime": {
+      "type": "datetime"
+    },
+    "endDateTime": {
+      "type": "datetime"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "place": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::place.place",
+      "inversedBy": "lives"
+    },
+    "dayOfWeeks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::day-of-week.day-of-week"
+    }
+  }
+}

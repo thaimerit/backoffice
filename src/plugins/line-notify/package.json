@@ -1,0 +1,25 @@
+{
+  "name": "line-notify",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "line-notify",
+    "description": "Description of Line Notify plugin",
+    "kind": "plugin",
+    "displayName": "Line Notify"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

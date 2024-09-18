@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zodiacs",
+  "info": {
+    "singularName": "zodiac",
+    "pluralName": "zodiacs",
+    "displayName": "ราศี"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "places": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place",
+      "inversedBy": "zodiacs"
+    }
+  }
+}

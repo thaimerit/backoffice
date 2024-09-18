@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_horoscopes_horoscopes",
+  "info": {
+    "displayName": "Horoscopes",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "detail": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

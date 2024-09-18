@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shelf_places_shelf_products",
+  "info": {
+    "displayName": "Shelf Products"
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}

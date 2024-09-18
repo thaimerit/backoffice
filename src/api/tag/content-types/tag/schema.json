@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "places": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place",
+      "mappedBy": "tags"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "holything",
+        "place",
+        "package",
+        "product"
+      ]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "tags"
+    }
+  }
+}

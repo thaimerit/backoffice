@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_colors_colors",
+  "info": {
+    "displayName": "Colors",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dayOfWeek": {
+      "type": "enumeration",
+      "enum": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ]
+    },
+    "workColors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    },
+    "moneyColors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    },
+    "loveColors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    },
+    "unfortunateColors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    }
+  }
+}

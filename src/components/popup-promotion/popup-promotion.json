@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_popup_promotion_popup_promotions",
+  "info": {
+    "displayName": "Popup Promotion",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "open": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank"
+      ],
+      "default": "_self",
+      "required": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

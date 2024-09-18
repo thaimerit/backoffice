@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "การแจ้งเตือน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "message",
+        "order",
+        "package",
+        "product"
+      ],
+      "default": "message"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "notifications"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "debug": {
+      "type": "json"
+    },
+    "sendNotification": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::send-notification.send-notification",
+      "inversedBy": "notifications"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}

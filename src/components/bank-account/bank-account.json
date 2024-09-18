@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_bank_account_bank_accounts",
+  "info": {
+    "displayName": "bankAccount",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "account": {
+      "type": "string"
+    },
+    "no": {
+      "type": "string"
+    },
+    "bank": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::bank.bank"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

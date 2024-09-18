@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "day_of_weeks",
+  "info": {
+    "singularName": "day-of-week",
+    "pluralName": "day-of-weeks",
+    "displayName": "วัน",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "color": {
+      "type": "string"
+    },
+    "sort": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
